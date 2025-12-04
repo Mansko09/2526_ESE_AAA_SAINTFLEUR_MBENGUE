@@ -13,7 +13,7 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 
 ## 2. Configuration matérielle utilisée
 
-- Carte : NUCLEO-G474.  
+- Carte : NUCLEO-G474RE.  
 - Moteur :  MP77S (MCC, 530W, 48V)  
 - Pour le control de moteur, on utilise la ma
 
@@ -26,6 +26,8 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 - Temps mort configuré : 400 ns (68 dans le registe). On a calculé (en partant de la datasheet) pour avoir une marge en prenant 200ns puis on a mis le double pour rien cramer car ce temps reste négligeable devant la période de PWM.
   <img width="590" height="220" alt="image" src="https://github.com/user-attachments/assets/00c0a349-37d4-4a38-af86-444972949c18" />
 - Duty cycle initial : 60 %
+
+
 
     
 

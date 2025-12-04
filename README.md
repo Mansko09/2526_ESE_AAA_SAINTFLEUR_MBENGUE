@@ -30,7 +30,9 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 <img width="249" height="154" alt="image" src="https://github.com/user-attachments/assets/1c45c52d-2fba-4ae3-88c3-620a46d05313" />
 
 
-    
+## 4. Premiers Tests :
+- On branche le moteur en 48V avec une limitation de 12A.
+
 
 
 

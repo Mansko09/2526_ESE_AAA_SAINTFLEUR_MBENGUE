@@ -1,0 +1,6 @@
+../Core/Src/motor_control/motor.c:19:6:motor_init	8	static
+../Core/Src/motor_control/motor.c:26:5:shellMotor	32	static
+../Core/Src/motor_control/motor.c:44:6:motor_update	16	static
+../Core/Src/motor_control/motor.c:62:5:setAlpha	16	static
+../Core/Src/motor_control/motor.c:74:5:setMotor	24	static
+../Core/Src/motor_control/motor.c:108:6:setMotorBrake	8	static

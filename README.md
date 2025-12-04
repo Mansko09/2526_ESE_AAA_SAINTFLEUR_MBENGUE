@@ -27,6 +27,7 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
   <img width="590" height="220" alt="image" src="https://github.com/user-attachments/assets/00c0a349-37d4-4a38-af86-444972949c18" />
 - Duty cycle initial : 60 %
 
+<img width="249" height="154" alt="image" src="https://github.com/user-attachments/assets/1c45c52d-2fba-4ae3-88c3-620a46d05313" />
 
 
     

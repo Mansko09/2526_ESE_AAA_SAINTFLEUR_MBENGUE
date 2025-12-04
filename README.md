@@ -22,8 +22,8 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 ### 3.1 Paramétrage dans STM32CubeMX / CubeIDE
 - Timer utilisé : Timer 1 CH1/CH1N,  CH2/CH2N.
 - Mode : PWM complémentaire (center aligned 1) avec dead-time 
-- Fréquence de commutation choisie : 20 kHz (PSC = 0, ARR = 4250-1) 
-- Temps mort configuré : 400 ns (68 dans le registe). On a calculé (en partant de la datasheet) pour avoir une marge en prenant 200ns puis on a mis le double pour rien cramer car ce temps reste négligeable devant la période de PWM.
+- Fréquence de commutation choisie : 20 kHz (PSC = 0, ARR = 4250-1) pour HCLK = 170MHz
+- Temps mort configuré : 400 ns (68 dans le registre). On a calculé (en partant de la datasheet) pour avoir une marge en prenant 200ns puis on a mis le double pour rien cramer car ce temps reste négligeable devant la période de PWM.
   <img width="590" height="220" alt="image" src="https://github.com/user-attachments/assets/00c0a349-37d4-4a38-af86-444972949c18" />
 - Duty cycle initial : 60 %
 
@@ -32,7 +32,7 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 
 ## 4. Premiers Tests :
 - On branche le moteur en 48V (qui seront hachés) avec une limitation de 12A.
-- Quand on monte le rapport Cyclique brusquement, on a une montée brusque du courant.Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
+- Quand on monte le rapport cyclique brusquement, on a une montée brusque du courant.Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
   On fait des pas de 100 sur le ARR (ARR_MAX = 4250) avec un temps d'interval de 5ms.
 
 

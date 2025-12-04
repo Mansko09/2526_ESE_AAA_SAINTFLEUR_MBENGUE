@@ -32,6 +32,8 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 
 ## 4. Premiers Tests :
 - On branche le moteur en 48V (qui seront hachés) avec une limitation de 12A.
+- Quand on monte le rapport Cyclique brusquement, on a une montée brusque du courant.Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
+  On fait des pas de 100 sur le ARR (ARR_MAX = 4250) avec un temps d'interval de 5ms.
 
 
 

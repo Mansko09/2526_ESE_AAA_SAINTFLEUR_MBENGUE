@@ -31,7 +31,7 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 
 
 ## 4. Premiers Tests :
-- On branche le moteur en 48V avec une limitation de 12A.
+- On branche le moteur en 48V (qui seront hachés) avec une limitation de 12A.
 
 
 

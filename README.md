@@ -41,3 +41,6 @@ On a rajouté ces fonctionnalités :
 
 <img width="277" height="72" alt="image" src="https://github.com/user-attachments/assets/3765f644-db5c-442b-96bb-5ef5f0896057" />
 
+### 7.2. Mesure du courant
+
+<img width="543" height="554" alt="image" src="https://github.com/user-attachments/assets/402a2e40-d038-4067-b83d-50605f8d1e7a" />

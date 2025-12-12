@@ -35,6 +35,9 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 - Quand on monte le rapport cyclique brusquement, on a une montée brusque du courant.Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
   On fait des pas de 100 sur le ARR (ARR_MAX = 4250) avec un temps d'interval de 5ms.
 
+## 7 - Commande en boucle ouverte, mesure de Vitesse et de courant
+### 7.1. Commande de la vitesse
+On a rajouté ces fonctionnalités :
 
-
+<img width="277" height="72" alt="image" src="https://github.com/user-attachments/assets/3765f644-db5c-442b-96bb-5ef5f0896057" />
 

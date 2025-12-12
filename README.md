@@ -47,9 +47,11 @@ On doit mesurer les courants dans les phases U et V (même si ce sont les mêmes
 les fonctions de transfert des capteurs de mesure de courant sont : 
 
 les pins utilisés sont les suivants : 
+
 <img width="271" height="277" alt="image" src="https://github.com/user-attachments/assets/402a2e40-d038-4067-b83d-50605f8d1e7a" />
 
 Voici la fonction liant la tension de mesure et le courant dans le GO10 SME : 
+
 <img width="351" height="69" alt="image" src="https://github.com/user-attachments/assets/03e4cfde-fb8c-41f5-a3df-aad2dff0f667" />
 
 

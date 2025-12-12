@@ -57,3 +57,8 @@ On en déduit :
 
 <img width="218" height="51" alt="image" src="https://github.com/user-attachments/assets/de6c9c28-6fd7-49e6-bb2f-e2faf3735e12" />
 
+On mesure une première valeur de courant avec l'ADC : 
+
+<img width="669" height="70" alt="image" src="https://github.com/user-attachments/assets/883b2fa0-a6d6-4dc7-871e-86cf0c44ffad" />
+
+

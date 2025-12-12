@@ -1,0 +1,8 @@
+../Core/Src/motor_control/motor.c:20:6:motor_init	1
+../Core/Src/motor_control/motor.c:27:5:shellMotor	2
+../Core/Src/motor_control/motor.c:45:6:motor_update	6
+../Core/Src/motor_control/motor.c:65:5:setAlpha	3
+../Core/Src/motor_control/motor.c:77:5:setMotor	7
+../Core/Src/motor_control/motor.c:111:6:setMotorBrake	1
+../Core/Src/motor_control/motor.c:130:5:shellStart	1
+../Core/Src/motor_control/motor.c:139:5:shellStop	1

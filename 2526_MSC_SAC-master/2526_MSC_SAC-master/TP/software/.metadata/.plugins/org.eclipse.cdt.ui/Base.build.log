@@ -1,0 +1,17 @@
+14:27:54 **** Incremental Build of configuration Debug for project Base ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/motor_control/motor.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/motor_control/motor.d" -MT"Core/Src/motor_control/motor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/motor_control/motor.o"
+arm-none-eabi-gcc -o "Base.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mbeng\Documents\ENSEA_3e_ESE\TP_Actionneurs\2526_ESE_AAA_SAINTFLEUR_MBENGUE\2526_MSC_SAC-master\2526_MSC_SAC-master\TP\software\Base\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Base.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Base.elf
+ 
+arm-none-eabi-size  Base.elf 
+arm-none-eabi-objdump -h -S Base.elf  > "Base.list"
+   text	   data	    bss	    dec	    hex	filename
+  37944	     96	   3568	  41608	   a288	Base.elf
+Finished building: default.size.stdout
+ 
+Finished building: Base.list
+ 
+
+14:27:57 Build Finished. 0 errors, 0 warnings. (took 2s.281ms)
+

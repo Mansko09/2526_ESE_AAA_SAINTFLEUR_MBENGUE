@@ -49,3 +49,6 @@ les fonctions de transfert des capteurs de mesure de courant sont :
 les pins utilisés sont les suivants : 
 <img width="271" height="277" alt="image" src="https://github.com/user-attachments/assets/402a2e40-d038-4067-b83d-50605f8d1e7a" />
 
+Voici la fonction liant la tension de mesure et le courant dans le GO10 SME : 
+<img width="831" height="333" alt="image" src="https://github.com/user-attachments/assets/873f65f3-eb1f-4d0a-8235-3fdadba6dc49" />
+

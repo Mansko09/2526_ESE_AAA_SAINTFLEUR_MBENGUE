@@ -43,8 +43,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
     	HAL_GPIO_TogglePin(ADC_Conv_toogle_GPIO_Port, ADC_Conv_toogle_Pin);
         // Exemple : moyenne pour réduire le bruit
         Imes =  adc_buffer[1];
-
-
     }
 }
 

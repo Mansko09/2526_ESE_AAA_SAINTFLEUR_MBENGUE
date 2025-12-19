@@ -8,6 +8,7 @@
 #include "motor_control/motor.h"
 #include "motor_control/asserv.h"
 #include "acquisition/input_analog.h"
+#include "acquisition/input_encoder.h"
 #include "stdlib.h"
 
 #define PWM_MAX 4250
@@ -25,6 +26,8 @@ void motor_init(){
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
 
 	currentMeasureInit();
+	init_encodeur();
+
 }
 
 int shellMotor(struct h_shell_struct* h_shell, int argc, char** argv){
@@ -152,7 +155,7 @@ int shellStop(struct h_shell_struct* h_shell, int argc, char** argv){
 }
 
 
-int shellIPolling(struct h_shell_struct* h_shell, int argc, char** argv){
+int shellImeasure(struct h_shell_struct* h_shell, int argc, char** argv){
 	int size;
 
 	uint16_t value;
@@ -165,4 +168,16 @@ int shellIPolling(struct h_shell_struct* h_shell, int argc, char** argv){
 	return 0;
 }
 
+int shellSpeedMeasure(struct h_shell_struct* h_shell, int argc, char** argv){
+	int size;
+
+	uint16_t value;
+
+	value = (uint16_t)getOmega();
+
+	size = snprintf(h_shell->print_buffer, SHELL_PRINT_BUFFER_SIZE, "Mesures de vitesse : %d \r\n",(int) value);
+
+	h_shell->drv.transmit(h_shell->print_buffer, size);
+	return 0;
+}
 

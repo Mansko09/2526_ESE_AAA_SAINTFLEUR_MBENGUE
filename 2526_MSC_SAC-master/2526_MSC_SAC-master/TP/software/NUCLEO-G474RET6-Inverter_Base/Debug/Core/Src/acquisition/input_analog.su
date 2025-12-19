@@ -2,5 +2,5 @@
 ../Core/Src/acquisition/input_analog.c:30:10:get_I_measured	4	static
 ../Core/Src/acquisition/input_analog.c:34:6:currentMeasureVolt	16	static
 ../Core/Src/acquisition/input_analog.c:39:6:HAL_ADC_ConvCpltCallback	16	static
-../Core/Src/acquisition/input_analog.c:51:6:HAL_ADC_ConvHalfCpltCallback	16	static
-../Core/Src/acquisition/input_analog.c:61:6:HAL_ADC_ErrorCallback	16	static
+../Core/Src/acquisition/input_analog.c:49:6:HAL_ADC_ConvHalfCpltCallback	16	static
+../Core/Src/acquisition/input_analog.c:59:6:HAL_ADC_ErrorCallback	16	static

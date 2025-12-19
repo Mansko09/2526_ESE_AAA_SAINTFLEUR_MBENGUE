@@ -12,6 +12,7 @@
 #include "usart.h"
 #include "motor_control/motor.h"
 #include "motor_control/asserv.h"
+#include "acquisition/input_encoder.h"
 #include "user_interface/led.h"
 
 void init_device();

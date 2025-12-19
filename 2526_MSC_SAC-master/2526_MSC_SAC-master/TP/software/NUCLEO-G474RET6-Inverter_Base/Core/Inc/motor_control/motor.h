@@ -22,6 +22,7 @@ void motor_init();
 void motor_update(void);
 int shellStop(struct h_shell_struct* h_shell, int argc, char** argv);
 int shellStart(struct h_shell_struct* h_shell, int argc, char** argv);
-int shellIPolling(struct h_shell_struct* h_shell, int argc, char** argv);
+int shellImeasure(struct h_shell_struct* h_shell, int argc, char** argv);
+int shellSpeedMeasure(struct h_shell_struct* h_shell, int argc, char** argv);
 
 #endif /* INC_MOTOR_CONTROL_MOTOR_H_ */

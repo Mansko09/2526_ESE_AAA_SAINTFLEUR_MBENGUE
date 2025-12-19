@@ -63,3 +63,10 @@ On mesure une première valeur de courant avec l'ADC :
 <img width="669" height="70" alt="image" src="https://github.com/user-attachments/assets/883b2fa0-a6d6-4dc7-871e-86cf0c44ffad" />
 
 
+
+Mesure de Vitesse : 
+
+
+<img width="516" height="292" alt="image" src="https://github.com/user-attachments/assets/581276a4-c5a2-4bf5-ad18-5903705d881f" />
+
+

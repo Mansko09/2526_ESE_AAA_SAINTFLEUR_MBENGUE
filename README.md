@@ -44,8 +44,6 @@ On a rajouté ces fonctionnalités :
 ### 7.2. Mesure du courant
 On mesure le courant uniquement dans la phase U car il s'agit d'une MCC
 
-les fonctions de transfert des capteurs de mesure de courant sont : 
-
 les pins utilisés sont les suivants : 
 
 <img width="271" height="277" alt="image" src="https://github.com/user-attachments/assets/402a2e40-d038-4067-b83d-50605f8d1e7a" />

@@ -6,6 +6,8 @@
  */
 
 #include "motor_control/motor.h"
+#include "motor_control/asserv.h"
+#include "acquisition/input_analog.h"
 #include "stdlib.h"
 
 #define PWM_MAX 4250
@@ -15,13 +17,14 @@
 // Variables globales
 static int16_t current_speed = PWM_MAX/2;
 static int16_t target_speed = 0;
-static uint8_t motor_ready = 0;
 
 void motor_init(){
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
 	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+
+	currentMeasureInit();
 }
 
 int shellMotor(struct h_shell_struct* h_shell, int argc, char** argv){
@@ -29,6 +32,7 @@ int shellMotor(struct h_shell_struct* h_shell, int argc, char** argv){
 
 	if(argc==2){
 		int16_t value=atoi(argv[1]);
+
 		// Met à jour la consigne cible, mais ne bloque pas !
 		target_speed = value;
 
@@ -44,22 +48,21 @@ int shellMotor(struct h_shell_struct* h_shell, int argc, char** argv){
 // Fonction à appeler dans la boucle principale
 void motor_update(void)
 {
-	if (motor_ready){
-    if(current_speed < target_speed)
-    {
-        current_speed += RAMP_STEP;
-        if(current_speed > target_speed) current_speed = target_speed;
-    }
-    else if(current_speed > target_speed)
-    {
-        current_speed -= RAMP_STEP;
-        if(current_speed < target_speed) current_speed = target_speed;
-    }
 
-    // Applique la valeur actuelle sur le PWM
-    int pwm_cmd = (uint16_t)(((current_speed ) * PWM_MAX) / 1000);
-    setAlpha(pwm_cmd);
+	if(current_speed < target_speed)
+	{
+		current_speed += RAMP_STEP;
+		if(current_speed > target_speed) current_speed = target_speed;
 	}
+	else if(current_speed > target_speed)
+	{
+		current_speed -= RAMP_STEP;
+		if(current_speed < target_speed) current_speed = target_speed;
+	}
+
+	// Applique la valeur actuelle sur le PWM
+	int pwm_cmd = (uint16_t)(((current_speed ) * PWM_MAX) / 1000);
+	setAlpha(pwm_cmd);
 }
 
 int setAlpha(int16_t in)
@@ -78,27 +81,27 @@ int setMotor(int16_t target)
 {
 
 	/* Saturation */
-		if (target > 1000) target = 1000;
-		if (target < 0) target = 0;
+	if (target > 1000) target = 1000;
+	if (target < 0) target = 0;
 
-		target_speed = target;
-    /* Rampe progressive */
-    if (current_speed < target_speed)
-    	current_speed += RAMP_STEP;
-    else if (current_speed > target_speed)
-    	current_speed -= RAMP_STEP;
+	target_speed = target;
+	/* Rampe progressive */
+	if (current_speed < target_speed)
+		current_speed += RAMP_STEP;
+	else if (current_speed > target_speed)
+		current_speed -= RAMP_STEP;
 
-    /* Empêche overshoot */
-    if (abs(target_speed - current_speed) < RAMP_STEP)
-        current_speed = target_speed;
+	/* Empêche overshoot */
+	if (abs(target_speed - current_speed) < RAMP_STEP)
+		current_speed = target_speed;
 
-    /* Applique la valeur sur le PWM */
-    int pwm = setAlpha(current_speed);
+	/* Applique la valeur sur le PWM */
+	int pwm = setAlpha(current_speed);
 
-    /* Petite pause pour réguler la rampe */
-    HAL_Delay(TIME_STEP);
+	/* Petite pause pour réguler la rampe */
+	HAL_Delay(TIME_STEP);
 
-    return pwm;
+	return pwm;
 }
 
 /*
@@ -130,7 +133,7 @@ void setMotorBrake(void)
 int shellStart(struct h_shell_struct* h_shell, int argc, char** argv){
 	int size;
 	motor_init();
-    target_speed = 500;
+	target_speed = 500;
 	size = snprintf(h_shell->print_buffer, SHELL_PRINT_BUFFER_SIZE, "Motor started \r\n");
 	h_shell->drv.transmit(h_shell->print_buffer, size);
 	return 0;
@@ -148,5 +151,18 @@ int shellStop(struct h_shell_struct* h_shell, int argc, char** argv){
 	return 0;
 }
 
+
+int shellIPolling(struct h_shell_struct* h_shell, int argc, char** argv){
+	int size;
+
+	uint16_t value;
+
+	value = (uint16_t)get_I_measured();
+
+	size = snprintf(h_shell->print_buffer, SHELL_PRINT_BUFFER_SIZE, "Mesures de courant : %d \r\n",(int) value);
+
+	h_shell->drv.transmit(h_shell->print_buffer, size);
+	return 0;
+}
 
 

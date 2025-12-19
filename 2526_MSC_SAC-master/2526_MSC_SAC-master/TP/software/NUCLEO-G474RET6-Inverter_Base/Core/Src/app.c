@@ -8,8 +8,10 @@
 #include "app.h"
 
 #include "user_interface/shell.h"
+#include "adc.h"
 
 static char shell_uart2_received_char;
+
 
 void init_device(void){
 // Initialisation user interface
@@ -18,6 +20,7 @@ void init_device(void){
 	hshell1.drv.receive = shell_uart2_receive;
 	shell_init(&hshell1);
 	shell_add(&hshell1, "speed", shellMotor, "Shell : call of setMotor ");
+	shell_add(&hshell1, "Imes", shellIPolling, "Shell : call of curernt measurement ");
 	shell_add(&hshell1, "start", shellStart, "Shell : call of start ");
 	shell_add(&hshell1, "stop", shellStop, "Shell : call of stop ");
 	HAL_UART_Receive_IT(&huart2, (uint8_t *)&shell_uart2_received_char, 1);
@@ -27,10 +30,10 @@ void init_device(void){
 
 	// BUTTON
 //	button_init();
-//
+
 	// ASSERV (PID)
 //	asserv_init();
-//
+
 // Initialisation data acquistion
 	// ANALOG INPUT
 //	input_analog_init();

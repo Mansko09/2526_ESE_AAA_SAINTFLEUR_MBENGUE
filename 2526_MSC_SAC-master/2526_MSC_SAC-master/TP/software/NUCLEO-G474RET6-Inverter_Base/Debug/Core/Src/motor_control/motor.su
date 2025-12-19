@@ -1,8 +1,9 @@
-../Core/Src/motor_control/motor.c:20:6:motor_init	8	static
-../Core/Src/motor_control/motor.c:27:5:shellMotor	32	static
-../Core/Src/motor_control/motor.c:45:6:motor_update	16	static
-../Core/Src/motor_control/motor.c:65:5:setAlpha	16	static
-../Core/Src/motor_control/motor.c:77:5:setMotor	24	static
-../Core/Src/motor_control/motor.c:111:6:setMotorBrake	8	static
-../Core/Src/motor_control/motor.c:130:5:shellStart	32	static
-../Core/Src/motor_control/motor.c:139:5:shellStop	32	static
+../Core/Src/motor_control/motor.c:21:6:motor_init	8	static
+../Core/Src/motor_control/motor.c:30:5:shellMotor	32	static
+../Core/Src/motor_control/motor.c:49:6:motor_update	16	static
+../Core/Src/motor_control/motor.c:68:5:setAlpha	16	static
+../Core/Src/motor_control/motor.c:80:5:setMotor	24	static
+../Core/Src/motor_control/motor.c:114:6:setMotorBrake	8	static
+../Core/Src/motor_control/motor.c:133:5:shellStart	32	static
+../Core/Src/motor_control/motor.c:142:5:shellStop	32	static
+../Core/Src/motor_control/motor.c:155:5:shellIPolling	32	static

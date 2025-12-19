@@ -11,6 +11,7 @@
 #include "stm32g4xx_hal.h"
 #include "usart.h"
 #include "motor_control/motor.h"
+#include "motor_control/asserv.h"
 #include "user_interface/led.h"
 
 void init_device();

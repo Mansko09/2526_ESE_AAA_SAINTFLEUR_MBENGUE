@@ -42,7 +42,7 @@ On a rajouté ces fonctionnalités :
 <img width="277" height="72" alt="image" src="https://github.com/user-attachments/assets/3765f644-db5c-442b-96bb-5ef5f0896057" />
 
 ### 7.2. Mesure du courant
-On doit mesurer les courants dans les phases U et V (même si ce sont les mêmes dans une MCC)
+On mesure le courant uniquement dans la phase U car il s'agit d'une MCC
 
 les fonctions de transfert des capteurs de mesure de courant sont : 
 

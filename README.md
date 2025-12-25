@@ -82,15 +82,16 @@ On en déduit :
 
 On mesure une première valeur de courant avec l'ADC : 
 
-<img width="387" height="516" alt="image" src="https://github.com/user-attachments/assets/66e867e0-845a-4a5e-ba23-0174e842667e" />
-
-
 <img width="669" height="70" alt="image" src="https://github.com/user-attachments/assets/883b2fa0-a6d6-4dc7-871e-86cf0c44ffad" />
 
 
+Dans le shell, on fait récupère la valeur mesurée depuis la chaine Timer ADC DMA ...
+
+<img width="387" height="516" alt="image" src="https://github.com/user-attachments/assets/66e867e0-845a-4a5e-ba23-0174e842667e" />
+
 
 Mesure de Vitesse : 
-
+En relisant les informations données dans le schéma kicad, on a reussi a retrouver les siganux du codeur (même ci celui de notre maquette était défectueux) et on a mesuré une valeur de vitesse juste avant de partir en vacances : 
 
 <img width="516" height="292" alt="image" src="https://github.com/user-attachments/assets/581276a4-c5a2-4bf5-ad18-5903705d881f" />
 

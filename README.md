@@ -32,7 +32,10 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 
 ## 4. Premiers Tests :
 - On branche le moteur en 48V (qui seront hachés) avec une limitation de 12A.
-- Quand on monte le rapport cyclique brusquement, on a une montée brusque du courant.Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
+
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/ac6ca0e7-dfbc-48cb-8bb3-5d33134482ff" />
+
+- Quand on monte le rapport cyclique brusquement, on a une montée brusque du courant. Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
   On fait des pas de 100 sur le ARR (ARR_MAX = 4250) avec un temps d'interval de 5ms.
 
 ## 5. Shell sans freeRTOS :
@@ -48,6 +51,12 @@ En faisant une installation de sondes pour détecter les PWM, on obtient ce mont
 Et l'oscillocsope affiche les signaux suivant :
 
 <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/d02af268-c744-4109-a7b6-465e12d8eeed" />
+
+
+On arrive aussi a faire varier le rapport cyclique...
+
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/5baf9d6b-9d2e-4979-b5bb-26f9aecaa35b" />
+
 
 ## 7 - Commande en boucle ouverte, mesure de Vitesse et de courant
 ### 7.1. Commande de la vitesse

@@ -74,6 +74,8 @@ les pins utilisés sont les suivants :
 Voici la fonction liant la tension de mesure et le courant dans le GO10 SME : 
 
 <img width="351" height="69" alt="image" src="https://github.com/user-attachments/assets/03e4cfde-fb8c-41f5-a3df-aad2dff0f667" />
+
+
 On en déduit : 
 
 <img width="218" height="51" alt="image" src="https://github.com/user-attachments/assets/de6c9c28-6fd7-49e6-bb2f-e2faf3735e12" />

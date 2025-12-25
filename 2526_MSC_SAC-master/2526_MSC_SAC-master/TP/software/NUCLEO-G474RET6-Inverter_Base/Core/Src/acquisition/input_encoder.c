@@ -22,7 +22,6 @@ void init_encodeur(void){
 
 void EncoderCallback(void)
 {
-
 	int32_t encoder_cnt = (int32_t)__HAL_TIM_GET_COUNTER(&htim3);
 	int32_t delta_cnt = encoder_cnt - encoder_cnt_prev;
 

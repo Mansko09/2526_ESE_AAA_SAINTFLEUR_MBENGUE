@@ -35,6 +35,20 @@ TP actionneurs - Kenny SAINT FLEUR et Mantoulaye MBENGUE -
 - Quand on monte le rapport cyclique brusquement, on a une montée brusque du courant.Donc on veut utiliser des rampes pour monter le rapport cyclique de façon progressive.
   On fait des pas de 100 sur le ARR (ARR_MAX = 4250) avec un temps d'interval de 5ms.
 
+## 5. Shell sans freeRTOS :
+Après quelques modifications, le shell fonctionne correctement.
+On créer les différentes fonctionnalités dans la fonction d'initialisation.
+
+<img width="908" height="253" alt="image" src="https://github.com/user-attachments/assets/9758c63b-b031-4cb5-8054-893589ea1603" />
+
+## 6. Commande MCC Basique :
+En faisant une installation de sondes pour détecter les PWM, on obtient ce montage : 
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/16b8a1d8-34e4-4e69-b695-15bb8165ccd6" />
+
+Et l'oscillocsope affiche les signaux suivant :
+
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/d02af268-c744-4109-a7b6-465e12d8eeed" />
+
 ## 7 - Commande en boucle ouverte, mesure de Vitesse et de courant
 ### 7.1. Commande de la vitesse
 On a rajouté ces fonctionnalités :
